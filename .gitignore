@@ -10,3 +10,6 @@ __pycache__/
 
 # Test / data
 .pytest_cache/
+
+# Packaging
+*.egg-info

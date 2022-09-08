@@ -3,6 +3,9 @@ from .template import Settings
 from .autograde import Autograde
 
 
+__version__ = '1.0.0'
+
+
 def autograde(
         standard_dir: str,
         student_dir: str,
