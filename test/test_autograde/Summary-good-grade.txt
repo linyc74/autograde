@@ -1,0 +1,10 @@
+[0_Greetings.ipynb] [# ANSWER 1 (1 point)] -> Correct!
+[1_Data types.ipynb] [# ANSWER 1 (1 point)] -> Correct!
+[1_Data types.ipynb] [# ANSWER 2 (1 point)] -> Correct!
+[2_Logic and comparison.ipynb] [# ANSWER 1 (1 point)] -> Correct!
+[3_Numeric calculation.ipynb] [# ANSWER 1 (1 point)] -> Correct!
+[3_Numeric calculation.ipynb] [# ANSWER 2 (1 point)] -> Correct!
+[4_Function.ipynb] [# ANSWER 1 (1 point)] -> Correct!
+[4_Function.ipynb] [# ANSWER 2 (1 point)] -> Correct!
+[5_Data type conversion.ipynb] [# ANSWER 1 (1 point)] -> Correct!
+Total points: 9.0

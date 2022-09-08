@@ -1,2 +1,2 @@
-# autograde
-Automatic grading for Jupyter Notebook
+# Autograde
+**Automatic grading for Jupyter Notebook**
