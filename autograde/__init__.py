@@ -3,7 +3,7 @@ from .template import Settings
 from .autograde import Autograde
 
 
-__version__ = '1.0.1-beta'
+__version__ = '1.0.1'
 
 
 def autograde(
