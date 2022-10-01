@@ -14,7 +14,7 @@ class TextLinesToCode:
         return self.code
 
 
-class ModifyCodeToReprTheLastLine:
+class ModifyCodeToPrintTheLastLine:
 
     lines: List[str]
 
@@ -22,7 +22,7 @@ class ModifyCodeToReprTheLastLine:
         self.lines = code.splitlines()
 
         last_line = self.lines[-1]
-        if not last_line.startswith('print('):
+        if not last_line.startswith('print'):
             self.lines[-1] = f'print({last_line})'
 
         return '\n'.join(self.lines)

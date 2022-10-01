@@ -5,7 +5,7 @@ from typing import Dict, List
 from contextlib import redirect_stdout
 from .tools import get_files
 from .datatypes import ANSWER_BOOK_TYPE, ANSWER_DICT_TYPE
-from .code_text import TextLinesToCode, ModifyCodeToReprTheLastLine
+from .code_text import TextLinesToCode, ModifyCodeToPrintTheLastLine
 
 
 class RunEntireFolderToAnswerBook:
@@ -45,7 +45,7 @@ class RunNotebookToAnswerDict:
     answer_dict: ANSWER_DICT_TYPE
 
     def __init__(self):
-        self.modify_last_line = ModifyCodeToReprTheLastLine().main
+        self.modify_last_line = ModifyCodeToPrintTheLastLine().main
 
     def main(self, ipynb: str) -> ANSWER_DICT_TYPE:
         self.ipynb = os.path.abspath(ipynb)
