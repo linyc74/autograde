@@ -13,3 +13,4 @@ __pycache__/
 
 # Packaging
 *.egg-info
+dist/
