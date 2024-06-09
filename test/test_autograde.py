@@ -31,3 +31,14 @@ class TestAutograde(TestCase):
             f'{self.indir}/Summary-good-grade.txt',
             f'{self.outdir}/Summary.txt',
         )
+
+    def test_missing_ipynb_grade(self):
+        Autograde(self.settings).main(
+            standard_dir=f'{self.indir}/homework_standard',
+            student_dir=f'{self.indir}/homework_missing_ipynb_student'
+        )
+        self.maxDiff = None
+        self.assertFileEqual(
+            f'{self.indir}/Summary-missing-ipynb.txt',
+            f'{self.outdir}/Summary.txt',
+        )

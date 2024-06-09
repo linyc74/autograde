@@ -29,7 +29,14 @@ class CompareAnswerBook(Processor):
         self.points = 0
         for ipynb in self.standard_answer_book.keys():
             standard_answer_dict = self.standard_answer_book[ipynb]
-            student_answer_dict = self.student_answer_book[ipynb]
+
+            student_answer_dict = self.student_answer_book.get(ipynb, None)
+
+            if student_answer_dict is None:
+                with open(f'{self.outdir}/Summary.txt', 'a', encoding='utf-8') as writer:
+                    writer.write(f'[{ipynb}] --- Missing\n')
+                continue
+
             self.points += CompareAnswerDict(self.settings).main(
                 ipynb=ipynb,
                 student_answer_dict=student_answer_dict,
