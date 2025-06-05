@@ -32,7 +32,7 @@ class TestAutograde(TestCase):
             f'{self.outdir}/Summary.txt',
         )
 
-    def test_missing_ipynb_grade(self):
+    def test_missing_ipynb(self):
         Autograde(self.settings).main(
             standard_dir=f'{self.indir}/homework_standard',
             student_dir=f'{self.indir}/homework_missing_ipynb_student'
@@ -41,4 +41,15 @@ class TestAutograde(TestCase):
         self.assertFileEqual(
             f'{self.indir}/Summary-missing-ipynb.txt',
             f'{self.outdir}/Summary.txt',
+        )
+
+    def test_plt_show(self):
+        """
+        Test that plt.show(), if any, should be removed prior to execution,
+        because plt.show() halts execution in a non-interactive environment.
+        plt.show() also does return anything, so should not affect student's grade.
+        """
+        Autograde(self.settings).main(
+            standard_dir=f'{self.indir}/homework_standard',
+            student_dir=f'{self.indir}/homework_plt_show_student'
         )

@@ -11,6 +11,7 @@ class TextLinesToCode:
         for line in text_lines:
             self.code += line.rstrip() + '\n'
         self.code = self.code.replace('%matplotlib inline', '')
+        self.code = self.code.replace('plt.show()', '')
         return self.code
 
 
